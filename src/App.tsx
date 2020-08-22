@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [val,setVal] = useState<string>("")
+    const [list,setList] = useState<string[]>([])
+
+    const handleClick=()=>{
+        setList([...list,val])
+        setVal('')
+    }
+
+    const handleChange=(e:React.FormEvent<HTMLInputElement>)=>{
+        setVal(e.currentTarget.value)
+    }
+
+    const deleteItem=(index:number)=>{
+        const mylist = [...list];
+        mylist.splice(index,1);
+        setList(mylist)
+    }
+
+    return (
+        <div className="App">
+            <label htmlFor="inputarea">输入内容</label>
+          <input id="inputarea" type="text" value={val} onChange={(e)=>{handleChange(e)}}/>
+          <button onClick={()=>{handleClick()}}>提交</button>
+            <ul>
+                {
+                    list.map((item,index)=>{
+                        return (<li key={index} onClick={()=>{deleteItem(index)}}>{item}</li>)
+                    })
+                }
+            </ul>
+        </div>
+    );
 }
 
 export default App;
