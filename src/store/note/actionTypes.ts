@@ -1,5 +1,8 @@
-export interface ADD_Action  {type:"ADD_NOTE",payload:string}
-export interface REMOVE_Action  {type:"REMOVE_NOTE",payload:number}
+export const ADD_NOTE='ADD_NOTE'
+export const REMOVE_NOTE='REMOVE_NOTE'
+
+export interface ADD_Action  {type:typeof ADD_NOTE,payload:any[]}
+export interface REMOVE_Action  {type:typeof REMOVE_NOTE,payload:number}
 
 
 

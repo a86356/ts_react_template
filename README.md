@@ -189,10 +189,31 @@ export const addNote = (note:string):Action =>({
 ```
 
 # 如何组织redux在react+ts中
+按模块划分，每个模块都有自己的reducer,actioncreator,actiontype,最后通过reducercombiner
+汇总到一起(暂未处理)
+
+
+
+https://redux.js.org/recipes/usage-with-typescript
+
+# 使用redux-thunk
+为什么要用这个，为了把异步的逻辑抽取出来，方便测试
+先安装
+https://github.com/zalmoxisus/redux-devtools-extension
+
+
+
+参考资料
+https://www.bilibili.com/video/av94656287?p=39
+
+# 使用路由
+npm install --save react-router-dom @types/react-router-dom
 
 
 
 # 在ts中,type和interface的不同点
 https://juejin.im/post/6844903749501059085#heading-11
 
+# ajax 发送循环问题解决
+https://juejin.im/post/6844903807000772621
 
