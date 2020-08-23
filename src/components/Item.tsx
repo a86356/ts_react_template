@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+
 type IProps ={
     index:number,
     item:string,
@@ -8,7 +9,9 @@ type IProps ={
 const Item:React.FC<IProps>=(props) =>{
     const {index,item,onClick} = props
     return (
-        <li className="red" key={index} onClick={()=>{onClick(index)}}>{item}</li>
+        <li className="abc" key={index} onClick={()=>{onClick(index)}}>
+            <span>{item}</span>
+        </li>
     );
 }
 Item.defaultProps={

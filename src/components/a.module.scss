@@ -1,0 +1,9 @@
+$red : red;
+
+.a{
+  :global{
+    .b{
+      color: $red;
+    }
+  }
+}
