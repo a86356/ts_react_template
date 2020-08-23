@@ -1,5 +1,9 @@
 # react+typescript+jest
 
+# 未完成的部分
+combineReducer,router,jest
+
+
 # 项目的安装
 npx create-react-app project-name --template typescript
 
