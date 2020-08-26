@@ -1,7 +1,7 @@
 # react+typescript+jest
 
 # 未完成的部分
-combineReducer,router,jest
+combineReducer,router,jest,eslint
 
 
 # 项目的安装
@@ -212,7 +212,33 @@ https://www.bilibili.com/video/av94656287?p=39
 
 # 使用路由
 npm install --save react-router-dom @types/react-router-dom
+```
+import React  from 'react';
+import '@/style/reset.css'
+import '@/style/common.scss'
 
+import TodoList from "./components/TodoList";
+
+import {BrowserRouter,Switch,Route} from "react-router-dom";
+
+import A from './components/a'
+import B from './components/b'
+
+function App() {
+
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route exact path={'/'} component={A} />
+                <Route exact path={'/b'} component={B} />
+            </Switch>
+        </BrowserRouter>
+
+    );
+}
+export default App;
+
+```
 
 
 # 在ts中,type和interface的不同点
@@ -221,3 +247,4 @@ https://juejin.im/post/6844903749501059085#heading-11
 # ajax 发送循环问题解决
 https://juejin.im/post/6844903807000772621
 
+# 实现了usereducer+usecontext替代redux的功能
