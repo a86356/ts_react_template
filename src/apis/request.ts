@@ -1,7 +1,5 @@
-
 import axios from 'axios'
 import BaseConfig from "../config/BaseConfig";
-import {strict} from "assert";
 
 axios.defaults.timeout = 15000;
 axios.defaults.baseURL = BaseConfig.baseURL;

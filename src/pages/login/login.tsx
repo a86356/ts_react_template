@@ -1,13 +1,14 @@
-import React from 'react';
-import './login.less'
+import React,{FC} from 'react';
+import './login.scss'
 
+import { Button } from 'antd';
 
-function LoginForm() {
+const Login:FC = ():JSX.Element=> {
     return (
         <div className="loginFormWrap">
-            123
+            <Button type="primary">Button</Button>
         </div>
     );
 }
 
-export default LoginForm;
+export default Login;

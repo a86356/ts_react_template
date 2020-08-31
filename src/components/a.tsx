@@ -1,14 +1,15 @@
-
 import React from 'react';
 
 import fontstyle from './a.module.scss'
 
+import Button from './button/button'
+
 const Item:React.FC=() =>{
 
     return (
-        <span className={fontstyle.a}>
-            <a href="" className={"b"}>aaaa</a>
-        </span>
+        <div>
+            <Button label={'12333'}/>
+        </div>
     );
 }
 
