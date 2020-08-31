@@ -1,3 +1,4 @@
+
 export const setCacheData= (k:string,v:string) =>{
     var storage=window.localStorage;
     return  storage.setItem(k,v)

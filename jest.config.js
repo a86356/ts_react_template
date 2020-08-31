@@ -21,7 +21,9 @@ module.exports = {
   // collectCoverage: false,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
-  // collectCoverageFrom: null,
+  //  collectCoverageFrom: [
+  //    'scripts/test.{js}',
+  //  ],
 
   // The directory where Jest should output its coverage files
   coverageDirectory: "coverage",
@@ -82,7 +84,7 @@ module.exports = {
   // moduleNameMapper: {},
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
-  // modulePathIgnorePatterns: [],
+   modulePathIgnorePatterns: ['scripts/test.js'],
 
   // Activates notifications for test results
   // notify: false,
@@ -132,7 +134,7 @@ module.exports = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: "node",
+  testEnvironment: "jsdom",
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
